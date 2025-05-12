@@ -1,5 +1,10 @@
-        
-        header {
+        img		{ 
+			max-width: 45%;
+			float: left;
+		}
+		
+		
+		header {
             grid-area: header;
             border: 1px solid black;
             padding: 0.5em;
@@ -11,8 +16,7 @@
             border: 1px solid black;
             padding: 0.5em;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            line-height: 1.5;
-            font-size: 22px;
+            font-size: 25px; 
         }
 
         main {
@@ -21,8 +25,7 @@
             padding: 0.5em;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             line-height: 1.5;
-            font-size: 17px;
-            line-clamp: 5;        
+            font-size: 16px;       
         }
 
         aside {
@@ -31,14 +34,7 @@
             padding: 0.5em;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             line-height: 1.5;
-            font-size: 19px; 
-        }
-
-        footer {
-            grid-area: footer;
-            border: 1px solid black;
-            padding: 0.5em;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size: 16px; 
         }
 
         .grid-container {
@@ -49,8 +45,6 @@
                 'nav nav main main main aside'
                 'nav nav footer footer footer footer';
             grid-gap: .5em;
-			
-			
         }
 
         body {
@@ -66,15 +60,16 @@
 
 
         @media only screen and (max-width : 800px) {
-            
+    
+
             .grid-container {
                 display: grid;
                 grid-template-areas:
-                    'nav nav nav nav nav nav'
                     'header header header header header header'
-                    'main main main main aside aside'
-                    'footer footer footer footer footer footer';
+					'nav nav nav nav nav nav'
+                    'main main main main aside aside';
                 grid-gap: .5em;
+                padding: .5em;
             }
 
             ul li {
@@ -82,8 +77,8 @@
             }
 
         }
-
         @media only screen and (max-width : 550px) {
+
 
             .grid-container {
                 display: grid;
@@ -91,18 +86,16 @@
                     'nav nav nav nav nav nav'
                     'header header header header header header'
                     'main main main main main main'
-                    'aside aside aside aside aside aside'
-                    'footer footer footer footer footer footer';
+                    'aside aside aside aside aside aside';
                 grid-gap: .5em;
+                padding: .5em;
             }
 
             ul li {
                 display: inline-block;
             }
-
-            video {
+			
+			img {
 				display: none;
 			}
-
         }
-        
